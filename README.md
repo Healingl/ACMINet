@@ -1,1 +1,1 @@
-# AlignedCross-ModalityInteractionNetwork
+# ACMINet
