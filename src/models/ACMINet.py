@@ -298,13 +298,10 @@ class ACMINet(nn.Module):
 
         self.upsample = nn.Upsample(scale_factor=2, mode="trilinear", align_corners=False)
 
-        # features[2]
         self.align_upsample_dec3 = Aligned3DUpsampleConcat(features=features[2])
 
-        # features[1]
         self.align_upsample_dec2 = Aligned3DUpsampleConcat(features=features[1])
 
-        # features[0]
         self.align_upsample_dec1 = Aligned3DUpsampleConcat(features=features[0])
 
         self.outconv = conv1x1(features[0], num_classes)
